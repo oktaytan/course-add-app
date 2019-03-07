@@ -1,0 +1,89 @@
+.customer__list {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+  place-items: center;
+}
+
+.card {
+  width: 21rem;
+  background-color: $color_4;
+  border: 2px solid $color_2;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: trans(border-color);
+
+  &:hover {
+    border-color: $color_1;
+  }
+
+  .card__image {
+    width: 100%;
+
+    img {
+      border-radius: 1.5rem 1.5rem 0 0;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.card__body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  padding: 1.5rem 0 0.8rem 0;
+
+  .card__detail {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
+
+    .badge {
+      width: 4.5rem;
+      height: 1.7rem;
+      display: inline-flex;
+      justify-content: flex-start;
+      padding: 0 0.4rem;
+      align-items: center;
+      background: linear-gradient(to right, darken($color_2, 20), $color_1);
+      font-size: 1rem;
+      border-radius: 0 1.5rem 1.5rem 0;
+      color: $color_4;
+      font-weight: 400;
+    }
+
+    #customer-name {
+      font-size: 1.125rem;
+      color: $color_3;
+      margin-left: 1rem;
+    }
+  }
+
+  .card__play {
+    position: absolute;
+    bottom: 0.625rem;
+    right: 0.625rem;
+    text-decoration: none;
+
+    &:hover .far {
+      color: $color_1;
+    }
+
+    .far {
+      font-size: 2.6rem;
+      color: $color_3;
+      transition: trans(color);
+
+    }
+  }
+}

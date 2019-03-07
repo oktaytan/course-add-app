@@ -1,0 +1,135 @@
+.course__form {
+  margin: 7rem 0 4rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 9rem;
+
+  .form__header {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 3rem;
+    margin-bottom: 1rem;
+
+    .form__title {
+      font-size: 2rem;
+      color: $color_1;
+      padding: 0;
+      margin: 0;
+      line-height: 1;
+      opacity: 1;
+      transition: trans(transform);
+
+      &.hide {
+        transform: translateX(150%);
+        opacity: 0;
+      }
+    }
+
+    .feedback {
+      font-size: 1.5rem;
+      background: linear-gradient(to right, $color_2, $color_1);
+      padding: 0.5rem 2rem;
+      border-radius: 3rem;
+      color: $color_4;
+      box-shadow: 0 0 1rem rgba($color_1, 0.7), 0 0 2rem rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-170%, -50%);
+      transition: trans(transform);
+      opacity: 0;
+
+      &.show {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
+    }
+  }
+
+  .input__group {
+    position: relative;
+    margin-bottom: 2rem;
+
+    .form__control {
+      width: 53rem;
+      height: 2.875rem;
+      border-radius: 1.5rem;
+      border: 2px solid $color_3;
+      padding: 0 3rem;
+      font-size: 1.125rem;
+      color: $color_3;
+      outline: none;
+      transition: trans(border-color);
+
+      &:focus {
+        border-color: $color_1;
+      }
+
+      &.validate {
+        border-color: darken($color_2, 20);
+        color: $color_1;
+      }
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 0.7rem;
+      transform: translateY(-50%);
+
+      &.active .far {
+        color: darken($color_2, 20);
+      }
+
+      .far {
+        font-size: 1.7rem;
+        color: $color_3;
+
+        &.focus {
+          color: $color_1;
+        }
+      }
+    }
+
+  }
+
+  .btn {
+    height: 2.875rem;
+    background: none;
+    border: 2px solid $color_1;
+    border-radius: 1.5rem;
+    font-size: 1.125rem;
+    color: $color_4;
+    background-color: $color_1;
+    padding: 0 1.8rem;
+    outline: none;
+    cursor: pointer;
+    transition: trans(all);
+
+    &.disable {
+      color: $color_3;
+      background-color: $color_4;
+      border-color: $color_3;
+
+      &:hover {
+        color: $color_3;
+        background-color: $color_4;
+        border-color: $color_3;
+      }
+    }
+
+    &:hover {
+      background-color: $color_4;
+      color: $color_1;
+      border-color: $color_1;
+    }
+  }
+}
+
+::placeholder {
+  font-size: 1.125rem;
+  color: $color_3;
+}

@@ -1,0 +1,111 @@
+@media screen and (max-width: 900px) {
+
+  body {
+    background-position: -5rem 0;
+  }
+
+  .container {
+    max-width: 100vw;
+    width: 90vw;
+  }
+
+  .course__form {
+    margin-bottom: 3rem;
+
+    .input__group {
+      position: relative;
+      margin-bottom: 2rem;
+
+      .form__control {
+        width: 80vw;
+        height: 2.875rem;
+        border-radius: 1.5rem;
+        border: 2px solid $color_3;
+        padding: 0 3rem;
+        font-size: 1.125rem;
+        color: $color_1;
+        outline: none;
+
+        &.active {
+          border-color: $color_1;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  #main-header {
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .course__form {
+
+    .form__header {
+
+      .form__title {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 325px) {
+  body {
+    background-position: -20rem -3rem;
+  }
+
+  #main-header {
+    align-items: center;
+  }
+
+  .menu__list {
+    align-items: center;
+  }
+
+  .logo {
+    flex-shrink: 0;
+    text-align: center;
+
+    img {
+      width: 60%;
+    }
+  }
+
+  .customer__list {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+
+  .card {
+    width: 16rem;
+  }
+
+  .card__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    padding: 1.5rem 0 2.5rem 0;
+
+    .card__play {
+      position: absolute;
+      bottom: 0.625rem;
+      right: 7rem;
+      text-decoration: none;
+      margin-top: 0.5rem;
+
+      .far {
+        font-size: 2rem;
+      }
+    }
+  }
+}
